@@ -28,7 +28,7 @@ const cocktailSlice = createSlice({
       })
       .addCase(getRandomCocktail.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.randomCocktail = action.payload;
+        state.randomCocktail = action.payload.drinks[0];
       })
       .addCase(getRandomCocktail.rejected, (state, action) => {
         state.status = "failed";

@@ -72,4 +72,5 @@ export const SearchButton = styled.button`
   cursor: pointer;
   margin-left: 0.5rem;
   border: none;
+  font-weight: 600;
 `;
