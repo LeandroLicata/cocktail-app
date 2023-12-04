@@ -7,7 +7,17 @@ const Results = () => {
 
   return (
     <Container>
-      <SearchBar type="search" defaultValue={value}/>
+      <SearchBar
+        type="search"
+        defaultValue={value}
+        placeholder={`Busca el trago por ${
+          type === "name"
+            ? "nombre"
+            : type === "ingredients"
+            ? "ingredientes"
+            : "categorías"
+        }`}
+      />
       <ResultNumber>{cocktails?.length} Resultados en tu búsqueda</ResultNumber>
       <ResultText>Explora las siguientes opciones</ResultText>
       <CocktailCarousel cocktails={cocktails} />

@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <CenteredIcon icon="emojione-v1:cocktail-glass" />
-      <NavbarLink href="#">Menú</NavbarLink>
+      <NavbarLink href="/">Menú</NavbarLink>
       <NavbarLink href="#">Recetas</NavbarLink>
     </NavbarWrapper>
   );
