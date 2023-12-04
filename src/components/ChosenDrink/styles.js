@@ -42,7 +42,6 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardDescription = styled.p`
-  // margin: 16px;
   color: black;
   text-align: center;
   padding-bottom: 0.5rem;
@@ -59,16 +58,12 @@ export const CardButton = styled.button`
   cursor: pointer;
   border: none;
   font-weight: 600;
-  display: flex;
-  justify-content: flex-end;
 `;
 
 export const TextContainer = styled.div`
   color: white;
   font-size: 20px;
   width: 50%;
-  // margin-left: 4rem;
-  // padding-right: 8rem;
 `;
 
 export const Title = styled.h2`
