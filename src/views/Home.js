@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import ChosenDrink from "../components/ChosenDrink/ChosenDrink";
 import Subscribe from "../components/Subscribe/Subscribe";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Header />
       <ChosenDrink />
       <Subscribe />
+      <Footer />
     </>
   );
 };

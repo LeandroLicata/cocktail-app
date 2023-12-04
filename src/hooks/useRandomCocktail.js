@@ -8,6 +8,7 @@ const useRandomCocktail = () => {
 
   useEffect(() => {
     dispatch(getRandomCocktail());
+    // eslint-disable-next-line
   }, []);
 
   return { randomCocktail }
