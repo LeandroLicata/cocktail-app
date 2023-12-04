@@ -58,6 +58,10 @@ export const CardButton = styled.button`
   cursor: pointer;
   border: none;
   font-weight: 600;
+
+  &:hover {
+    background-color: #ffd200;
+  }
 `;
 
 export const TextContainer = styled.div`

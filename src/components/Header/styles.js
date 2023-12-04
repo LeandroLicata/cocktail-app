@@ -72,4 +72,8 @@ export const SearchButton = styled.button`
   margin-left: 0.5rem;
   border: none;
   font-weight: 600;
+
+  &:hover {
+    background-color: #ffd200;
+  }
 `;

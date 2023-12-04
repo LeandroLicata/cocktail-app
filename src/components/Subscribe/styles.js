@@ -78,6 +78,10 @@ export const SubscribeButton = styled.button`
   flex: 1;
   width: 100%;
   margin-top: 2rem;
+
+  &:hover {
+    background-color: #ffd200;
+  }
 `;
 
 export const IconContainer = styled.div`

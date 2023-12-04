@@ -4,15 +4,18 @@ import CocktailCard from "../CocktailCard/CocktailCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-};
-
 const CocktailCarousel = ({ cocktails }) => {
+  // Determinar dinámicamente el número de tarjetas a mostrar
+  const slidesToShow = cocktails.length >= 3 ? 3 : cocktails.length;
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+  };
+
   return (
     <CarouselContainer>
       <Slider {...settings}>
