@@ -14,6 +14,7 @@ const Results = () => {
     <Container>
       <SearchBar
         type="search"
+        defaultValue={value}
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder={`Busca el trago por ${

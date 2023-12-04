@@ -31,6 +31,8 @@ export const CardContent = styled.div`
 export const CardTitle = styled.h2`
   margin-bottom: 7px;
   font-size: 1.2rem; 
+  max-height: 1.6rem;
+  overflow: auto;
 `;
 
 export const CardDescription = styled.p`
