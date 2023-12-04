@@ -11,19 +11,21 @@ import {
   SearchButton,
 } from "./styles";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
-  const [filter, setFilter] = useState("name"); // Por defecto, busca por nombre
+  const [filter, setFilter] = useState("name");
+  const navigate = useNavigate();
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
-    // Aquí podrías hacer algo más si es necesario al cambiar el filtro
   };
 
-  const handleSearch = () => {
-    // Aquí puedes realizar la lógica para redirigir o hacer la solicitud a otro endpoint
+  const handleSearch = (e) => {
+    e.preventDefault();
     console.log(`Buscando "${searchText}" por ${filter}`);
+    navigate(`/results?type=${filter}&value=${searchText}`);
   };
 
   return (

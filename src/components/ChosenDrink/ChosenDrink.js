@@ -28,6 +28,7 @@ const ChosenDrink = () => {
           <CardButton>Ver receta</CardButton>
         </CardContent>
       </CardContainer>
+      
       <TextContainer>
         <Title>
           Los tragos <Highlighted>más elegidos</Highlighted>
