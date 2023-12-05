@@ -57,6 +57,7 @@ export const SearchContainer = styled.form`
 export const SearchBar = styled.input`
   flex: 1;
   background-color: white;
+  color: black;
   border-radius: 1.5rem;
   padding: 0.65rem 1rem;
   border: none;

@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const SearchBar = styled.input`
   background-color: white;
+  color: black;
   border-radius: 1.5rem;
   padding: 0.65rem 1rem;
   border: none;
