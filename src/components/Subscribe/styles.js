@@ -2,12 +2,19 @@ import styled from "styled-components";
 import { Icon } from "@iconify/react";
 
 export const Container = styled.div`
-  height: 100vh;
   background-color: #383838;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 8rem;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    padding: 0 8rem;
+  }
+
+  @media (max-width: 767px) {
+    padding: 2rem;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -29,9 +36,16 @@ export const Highlighted = styled.span`
 export const CardContainer = styled.div`
   border-radius: 1.5rem;
   background-color: #f1f1f1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 2rem;
+
+  @media (max-width: 767px) {
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const SubscribeContainer = styled.div`
@@ -88,6 +102,10 @@ export const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const CocktailIcon = styled(Icon)`

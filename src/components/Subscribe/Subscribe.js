@@ -26,7 +26,7 @@ const Subscribe = () => {
         </p>
       </TextContainer>
       <CardContainer>
-        <br />
+        <IconContainer />
         <SubscribeContainer>
           <EmailInput
             type="email"

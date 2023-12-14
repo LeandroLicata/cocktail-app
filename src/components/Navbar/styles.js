@@ -6,9 +6,14 @@ export const NavbarWrapper = styled.nav`
   padding-right: 10px;
   color: white;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly; 
   align-items: center;
   height: 15vh;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end; 
+  }
 `;
 
 export const NavbarLink = styled.a`
@@ -25,8 +30,15 @@ export const NavbarLink = styled.a`
 `;
 
 export const CenteredIcon = styled(Icon)`
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
   font-size: 48px;
+
+  @media (max-width: 767px) {
+    // display: none; 
+  }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 `;

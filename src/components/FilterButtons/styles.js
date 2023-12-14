@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-right: 5rem;
+  // padding-right: 5rem;
+
+  @media (min-width: 768px) {
+    padding-right: 5rem;
+  }
 `;
 
 export const Button = styled.button`

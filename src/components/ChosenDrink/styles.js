@@ -1,20 +1,35 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
+  // height: 100vh;
   background-color: #383838;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 `;
 
 export const CardContainer = styled.div`
-  width: 450px;
   height: 475px;
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: white;
-  margin-left: 5rem;
+
+  @media (max-width: 767px) {
+    margin: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 450px;
+    margin-left: 5rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -67,13 +82,28 @@ export const CardButton = styled.button`
 export const TextContainer = styled.div`
   color: white;
   font-size: 20px;
-  width: 50%;
+
+  @media (max-width: 767px) {
+    margin: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export const Title = styled.h2`
   font-weight: 500;
-  margin-left: 2rem;
+
   margin-bottom: 4rem;
+
+  @media (min-width: 768px) {
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    // font-size: 1.7rem;
+  }
 `;
 
 export const Highlighted = styled.span`
@@ -85,4 +115,8 @@ export const Highlighted = styled.span`
 export const Text = styled.p`
   margin-left: 2rem;
   margin-right: 14rem;
+
+  @media (max-width: 767px) {
+    margin: 1rem 0;
+  }
 `;

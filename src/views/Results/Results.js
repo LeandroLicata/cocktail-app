@@ -5,10 +5,7 @@ import ResultsSearchBar from "../../components/ResultsSearchBar/ResultsSearchBar
 
 const Results = () => {
   const { cocktails, type, value } = useGetCocktails();
-  const results =
-    cocktails?.length === undefined || cocktails?.length === null
-      ? 0
-      : cocktails?.length;
+  const results = !cocktails?.length ? 0 : cocktails?.length;
 
   return (
     <Container>
