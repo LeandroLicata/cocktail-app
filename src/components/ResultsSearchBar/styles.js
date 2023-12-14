@@ -7,6 +7,9 @@ export const SearchBar = styled.input`
   padding: 0.65rem 1rem;
   border: none;
   height: 2rem;
-  width: 20rem;
   margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    width: 20rem;
+  }
 `;
