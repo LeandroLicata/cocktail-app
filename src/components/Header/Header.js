@@ -25,7 +25,8 @@ const Header = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(`Buscando "${searchText}" por ${filter}`);
-    navigate(`/results?type=${filter}&value=${searchText}`);
+    // navigate(`/results?type=${filter}&value=${searchText}`);
+    navigate(`/results?type=name&value=${searchText}`);
   };
 
   return (

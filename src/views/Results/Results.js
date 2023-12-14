@@ -6,7 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 const Results = () => {
   const { cocktails, type, value } = useGetCocktails();
-  const results = cocktails?.length === undefined ? 0 : cocktails.length;
+  const results =
+    cocktails?.length === undefined || cocktails?.length === null
+      ? 0
+      : cocktails?.length;
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
 
@@ -32,7 +35,7 @@ const Results = () => {
       />
       <ResultNumber>{results} Resultados en tu búsqueda</ResultNumber>
       <ResultText>Explora las siguientes opciones</ResultText>
-      <CocktailCarousel cocktails={cocktails} />
+      <CocktailCarousel cocktails={cocktails} value={value} />
     </Container>
   );
 };

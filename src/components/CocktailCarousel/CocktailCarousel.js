@@ -1,12 +1,13 @@
-import { CarouselContainer } from "./styles";
+import { CarouselContainer, NoResults } from "./styles";
 import Slider from "react-slick";
 import CocktailCard from "../CocktailCard/CocktailCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const CocktailCarousel = ({ cocktails }) => {
+const CocktailCarousel = ({ cocktails, value }) => {
   // Determinar dinámicamente el número de tarjetas a mostrar
-  const slidesToShow = cocktails.length >= 3 ? 3 : cocktails.length;
+
+  const slidesToShow = cocktails?.length >= 3 ? 3 : cocktails?.length;
 
   const settings = {
     dots: false,
@@ -18,11 +19,15 @@ const CocktailCarousel = ({ cocktails }) => {
 
   return (
     <CarouselContainer>
-      <Slider {...settings}>
-        {cocktails?.map((cocktail) => (
-          <CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
-        ))}
-      </Slider>
+      {slidesToShow ? (
+        <Slider {...settings}>
+          {cocktails?.map((cocktail) => (
+            <CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
+          ))}
+        </Slider>
+      ) : (
+        <NoResults>No hay resultados disponibles para {value}</NoResults>
+      )}
     </CarouselContainer>
   );
 };
