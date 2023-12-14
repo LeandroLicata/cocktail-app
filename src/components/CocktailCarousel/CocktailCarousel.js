@@ -5,8 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CocktailCarousel = ({ cocktails, value }) => {
-  // Determinar dinámicamente el número de tarjetas a mostrar
-
   const slidesToShow = cocktails?.length >= 3 ? 3 : cocktails?.length;
 
   const settings = {
@@ -15,6 +13,14 @@ const CocktailCarousel = ({ cocktails, value }) => {
     speed: 500,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (

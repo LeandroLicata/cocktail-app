@@ -9,6 +9,10 @@ export const Container = styled.div`
   background-size: cover;
   background-position: center;
   padding: 0 8rem;
+
+  @media (max-width: 767px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const ResultNumber = styled.span`

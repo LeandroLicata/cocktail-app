@@ -6,7 +6,8 @@ export const CardContainer = styled.div`
   border-radius: 1rem; 
   overflow: hidden;
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem; 
 `;
 
 export const ImageContainer = styled.div`
